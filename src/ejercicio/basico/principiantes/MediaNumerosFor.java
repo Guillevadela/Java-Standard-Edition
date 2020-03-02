@@ -45,6 +45,8 @@ public class MediaNumerosFor {
 		System.out.println("minima " + minima + " ºC");
 		System.out.println("maxima " + maxima + " ºC");
 
+		sc.close();
+
 	}
 
 }

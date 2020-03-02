@@ -1,35 +1,20 @@
 package ejercicio.basico.principiantes;
 
-import java.util.Scanner;
-
-/**
- * 
- * Ejercicio para pedir 3 numeros por pantalla y sacar la media
- *
- */
 public class PaisesCoronaVirus {
 
 	public static void main(String[] args) {
 
-		int num1, num2, num3;
-		float media;
-		Scanner sc = new Scanner(System.in);
+		final String[] PAISES = { "Noruega", "Alemania", "Republica Checa", "Italia" };
+		boolean[] paisesInfectados = { false, false, false, false };
+		int[] numeroInfectados = { 0, 0, 0, 0 };
 
-		System.out.println("Dime el primer numero:");
-		String linea = sc.nextLine();
-		num1 = Integer.parseInt(linea);
+		// Recorrer paises y preguntar si existe algun caso de corona virus
+		// en caso afirmativo preguntar numero de infectados
 
-		System.out.println("Dime el segundo numero:");
-		num2 = Integer.parseInt(sc.nextLine());
-
-		System.out.println("Dime el tercer numero:");
-		num3 = Integer.parseInt(sc.nextLine());
-
-		media = (num1 + num2 + num3) / (float) 3;
-
-		System.out.println(media);
-
-		sc.close();
+		// finalmente:
+		// 1. mostrar paises libres de corona virus
+		// 2. mostrar paises infectados con su numero de casos
+		// 3. total numero de personas infectadas
 
 	}
 
