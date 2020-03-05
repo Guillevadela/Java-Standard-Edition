@@ -16,6 +16,8 @@ public class JugandoConString {
 		int numeroMayusculas = 0;
 		int numeroMinusculas = 0;
 		int numeroConsonantes = 0;
+		int numeroNumeros = 0;
+		int numeroEspaciosB = 0;
 
 		// TODO contar numeros y espacios en blanco
 
@@ -31,6 +33,14 @@ public class JugandoConString {
 			}
 			if (Character.isUpperCase(caracter)) {
 				numeroMayusculas++;
+			}
+
+			if (Character.isDigit(caracter)) {
+				numeroNumeros++;
+			}
+
+			if (Character.isWhitespace(caracter)) {
+				numeroEspaciosB++;
 			}
 
 			// Contar (Vocales o Consonates) Si => es Letra
@@ -60,6 +70,8 @@ public class JugandoConString {
 		System.out.println("Numero Minusculas " + numeroMinusculas);
 		System.out.println("Numero Vocales " + numeroVocales);
 		System.out.println("Numero Consonantes " + numeroConsonantes);
+		System.out.println("Numero de Numeros " + numeroNumeros);
+		System.out.println("Numero de espacios Blancos " + numeroEspaciosB);
 
 		// numero de palabras
 
@@ -70,6 +82,7 @@ public class JugandoConString {
 
 		String lineaCVS = "jose;froilan;16;35.000";
 		// TODO mostrar nombre y apellido, la edad y el sueldo anual
+		// nombre apellido edad y sueldo
 
 		// buscar posicion de una letra concreta
 		String buscarLetra = "Abracadrabra";
