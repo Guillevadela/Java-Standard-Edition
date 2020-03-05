@@ -43,7 +43,7 @@ public class JugandoConString {
 				numeroEspaciosB++;
 			}
 
-			// Contar (Vocales o Consonates) Si => es Letra
+			// Contar (Vocales o S) Si => es Letra
 
 			if (Character.isLetter(caracter)) {
 
@@ -62,7 +62,7 @@ public class JugandoConString {
 					break;
 				}// switch
 
-			} // if isLetter
+			} // if is Letter
 
 		} // for
 
@@ -75,22 +75,32 @@ public class JugandoConString {
 
 		// numero de palabras
 
-		String palabras = "hola mi nombre es Ander";
+		String palabras = "hola mi nombre es Guillermo";
 		String[] arrayPalabras = palabras.split(" ");
 
 		System.out.println("Tenemos " + arrayPalabras.length + " palabras en la frase");
 
-		String lineaCVS = "jose;froilan;16;35.000";
+		
 		// TODO mostrar nombre y apellido, la edad y el sueldo anual
 		// nombre apellido edad y sueldo
+		String lineaCVS = "jose;froilan;16;35.000";
+		String[] arrayCampos = lineaCVS.split(";");
+
+		System.out.println("Nombre: " + arrayCampos[0] + " " + arrayCampos[1]);
+		System.out.println("Edad: " + arrayCampos[2]);
+		System.out.println("Sueldo: " + arrayCampos[3] + " €/mes");
 
 		// buscar posicion de una letra concreta
+		// TODO buscar primera 'd'
+		// TODO buscar posicion ultima 'a'
 		String buscarLetra = "Abracadrabra";
 		System.out.println("La primera b esta en la poscion " + buscarLetra.indexOf('b'));
 		System.out.println("La primera a esta en la poscion " + buscarLetra.indexOf('a'));
-		System.out.println("¿Que pasa si no encuentra? " + buscarLetra.indexOf('z'));
-		// TODO buscar primera 'd'
-		// TODO buscar posicion ultima 'a'
+		System.out.println("La primera d esta en la poscion " + buscarLetra.indexOf('d'));
+		System.out.println("La ultima a esta en la poscion " + buscarLetra.charAt(11));
+		System.out.println("La ultima a esta en la poscion " + buscarLetra.lastIndexOf('a'));
+		System.out.println("¿Que pasa si no la encuentra? " + buscarLetra.indexOf('z'));
+		
 
 		// limpiar espacios en blanco
 		String datosIntroducidosUsuario = "    minombre       es Manolo    ";
@@ -99,12 +109,30 @@ public class JugandoConString {
 		System.out.println(limpiarEspacios);
 
 		// TODO cambiar numeros por letras y ademas pasar todo a MAYSUCULAS
+		
 		String textoCodificado = " h0l4 m1 n0mb3 3s m4n0l0 ";
+		String desCodificado = " h0l4 m1 n0mb3 3s m4n0l0 ";
 
-		// TODO sumar todos los numeros de este String
-		String dni = "12345678";
+		desCodificado = desCodificado.replace('0', 'o');
+		desCodificado = desCodificado.replace('4', 'a');
+		desCodificado = desCodificado.replace('3', 'e');
+		desCodificado = desCodificado.replace('1', 'i');
 
+		System.out.println(textoCodificado);
+		System.out.println(desCodificado);
+
+		// TODO sumar todos los numeros de este String "ejercicio DNI"
 		// TODO buscar por interenet como se calcula la letra
+		final char LETRA_DNI[] = { 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q',
+				'V', 'H', 'L', 'C', 'K', 'E' };
+		String dniTexto = "12345678";
+		int numeroDni = Integer.parseInt(dniTexto);
+
+		int restoDivision = numeroDni % 23;
+
+		System.out.println("La letra es " + LETRA_DNI[restoDivision]);
+
+		
 
 	}
 
