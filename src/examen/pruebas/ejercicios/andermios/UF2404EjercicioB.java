@@ -93,12 +93,12 @@ public class UF2404EjercicioB {
 	}
 
 	private static void calcularDNI() {
+		//
 		System.out.println("Dime tu dni");
 		String dniTexto = sc.nextLine();
 		System.out.println(dniTexto);
 
-		final char LETRA_DNI[] = { 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q',
-				'V', 'H', 'L', 'C', 'K', 'E' };
+		final char LETRA_DNI[] = { 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E' };
 
 		int numeroDni = Integer.parseInt(dniTexto);
 
