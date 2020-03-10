@@ -21,18 +21,40 @@ public class Utilidades {
 	 * @throws Exception
 	 */
 
-	static void saludar(String nombre, String idioma) throws Exception {
-		// System.out.println("Hola " + nombre);
-		// si es void el retorno, no hay return
-		if (IDIOMA_CASTELLANO.equals(idioma)) {
-			System.out.println("Hola " + nombre);
-		} else if (IDIOMA_EUSKERA.equals(idioma)) {
-			System.out.println("Kaitxo " + nombre);
-		} else if ((IDIOMA_INGLES.equals(idioma))) {
-			System.out.println("Hello " + nombre);
-		} else {
-			throw new Exception("has introducido un idioma desconocido");
+//	static void saludar(String nombre, String idioma) throws Exception {
+//		// System.out.println("Hola " + nombre);
+//		// si es void el retorno, no hay return
+//		if (IDIOMA_CASTELLANO.equals(idioma)) {
+//			System.out.println("Hola " + nombre);
+//		} else if (IDIOMA_EUSKERA.equals(idioma)) {
+//			System.out.println("Kaitxo " + nombre);
+//		} else if ((IDIOMA_INGLES.equals(idioma))) {
+//			System.out.println("Hello " + nombre);
+//		} else {
+//			throw new Exception("has introducido un idioma desconocido");
+//		}
+//
+//	}
+
+	static String saludar(String nombre, String idioma) throws Exception {
+		String saludo = "";
+		switch (idioma) {
+		case IDIOMA_CASTELLANO:
+			saludo = "Hola " + nombre;
+			break;
+		case IDIOMA_EUSKERA:
+			saludo = "Kaixo " + nombre;
+			break;
+		case IDIOMA_INGLES:
+			saludo = "Hello " + nombre;
+			break;
+
+		default:
+			throw new Exception("Idioma no permitido " + idioma);
+		// break;
 		}
+
+		return saludo;
 
 	}
 
@@ -61,4 +83,54 @@ public class Utilidades {
 		}
 		return letra;
 	}
+
+	/**
+	 * Ordena de menor a mayor un array de enteros
+	 * 
+	 * @see https://www.youtube.com/watch?v=lyZQPjUT5B4&t=65s
+	 * @param aDesordenado int[] array desordenado
+	 * @return int[] array ordenado de menor a mayor
+	 */
+	static int[] bubbleShort(int[] aDesordenado) {
+
+		int[] aOrdenado = aDesordenado;
+		int aux = 0;
+
+		for (int i = 0; i < aOrdenado.length; i++) {
+			for (int j = 0; j < (aOrdenado.length - 1); j++) {
+
+				if (aOrdenado[j] > aOrdenado[j + 1]) {
+
+					aux = aOrdenado[j];
+					aOrdenado[j] = aOrdenado[j + 1];
+					aOrdenado[j + 1] = aux;
+				}
+
+			}
+
+		}
+
+		return aOrdenado;
+	}
+
+	static int[] bubbleShortJoseba(int[] aDesordenado) {
+
+		int[] aOrdenado = aDesordenado;
+		int aux = 0;
+
+		for (int i = 0; i < (aOrdenado.length - 1); i++) {
+
+			if (aOrdenado[i] > aOrdenado[i + 1]) {
+
+				aux = aOrdenado[i];
+				aOrdenado[i] = aOrdenado[i + 1];
+				aOrdenado[i + 1] = aux;
+				i = 0;
+			}
+
+		}
+
+		return aOrdenado;
+	}
+
 }
