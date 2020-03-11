@@ -2,7 +2,7 @@ package com.ipartek.formacion.clases;
 
 public class Persona {
 
-	// ATRIBUTOS
+	// ATRIBUTOS PARAMETROS
 	// siempre son 'private' para que no se puedan manipular desde fuera de esta
 	// clase, para poder manipular los atributos hay que crear metodos 'publicos'
 	// denominados getters y setters. Ha esto se le llama 'encapsulacion'
@@ -24,6 +24,8 @@ public class Persona {
 		this.raza = "";
 
 	}
+
+	// GETTERS y SETTERS
 
 	public String getNombre() {
 		return nombre;
@@ -65,8 +67,11 @@ public class Persona {
 		this.raza = raza;
 	}
 
-	// GETTERS y SETTERS
-
 	// OTRAS FUNCIONES
+
+	@Override
+	public String toString() {
+		return "Persona [nombre=" + nombre + ", altura=" + altura + ", edad=" + edad + ", genero=" + genero + ", raza=" + raza + "]";
+	}
 
 }
