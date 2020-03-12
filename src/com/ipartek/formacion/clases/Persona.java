@@ -2,30 +2,34 @@ package com.ipartek.formacion.clases;
 
 public class Persona {
 
-	// ATRIBUTOS PARAMETROS
+	public static final char GENERO_FEMENINO = 'f';
+	public static final char GENERO_MASCULINO = 'm';
+	public static final char GENERO_INDEFINIDO = 'i';
+
+	// ATRIBUTOS
 	// siempre son 'private' para que no se puedan manipular desde fuera de esta
 	// clase, para poder manipular los atributos hay que crear metodos 'publicos'
 	// denominados getters y setters. Ha esto se le llama 'encapsulacion'
-
 	private String nombre;
-	private int altura;
+	private int altura; // cm
 	private int edad;
-	private String genero;
+	private char genero;
 	private String raza;
 
-	// CONSTRUCTORES
-	// constructor porque se llama igual que la Clase
 	public Persona() {
 		super();
-		this.nombre = "";
+		this.nombre = "anonimo";
 		this.altura = 0;
 		this.edad = 0;
-		this.genero = "";
+		this.genero = GENERO_INDEFINIDO;
 		this.raza = "";
-
 	}
 
-	// GETTERS y SETTERS
+	public Persona(String nombre, char genero) {
+		this();
+		this.nombre = nombre;
+		this.genero = genero;
+	}
 
 	public String getNombre() {
 		return nombre;
@@ -51,11 +55,11 @@ public class Persona {
 		this.edad = edad;
 	}
 
-	public String getGenero() {
+	public char getGenero() {
 		return genero;
 	}
 
-	public void setGenero(String genero) {
+	public void setGenero(char genero) {
 		this.genero = genero;
 	}
 
@@ -66,8 +70,6 @@ public class Persona {
 	public void setRaza(String raza) {
 		this.raza = raza;
 	}
-
-	// OTRAS FUNCIONES
 
 	@Override
 	public String toString() {

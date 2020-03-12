@@ -2,22 +2,20 @@ package com.ipartek.formacion.clases;
 
 public class Alumno extends Persona {
 
-	// atributos o parametros
+	public static final int NOTA_MIN = 0;
+	public static final int NOTA_MAX = 10;
 
 	private String email;
 	private String github;
 	private int nota;
 
-	// constructores inicializados
-
 	public Alumno() {
 		super();
 		this.email = "";
 		this.github = "";
-		this.nota = 0;
+		this.nota = 5;
 	}
 
-	// getters and setters
 	public String getEmail() {
 		return email;
 	}
@@ -42,10 +40,9 @@ public class Alumno extends Persona {
 		this.nota = nota;
 	}
 
-	// to string
 	@Override
 	public String toString() {
-		return "Alumno [email=" + email + ", github=" + github + ", nota=" + nota + "]";
+		return super.toString() + " Alumno [email=" + email + ", github=" + github + ", nota=" + nota + "]";
 	}
 
 }// class

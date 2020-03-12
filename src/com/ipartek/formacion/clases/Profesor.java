@@ -2,24 +2,20 @@ package com.ipartek.formacion.clases;
 
 public class Profesor extends Persona {
 
-	// atributos o parametros
-	private double sueldo;
+	private float sueldo;
 	private String materia;
 
-	// CONSTRUCTORES INICIALIZADOS
-	public Profesor(int i, String string) {
+	public Profesor() {
 		super();
-		this.sueldo = 0.0;
+		this.sueldo = 2000;
 		this.materia = "";
 	}
 
-	// GETTERS y SETTERS
-
-	public double getSueldo() {
+	public float getSueldo() {
 		return sueldo;
 	}
 
-	public void setSueldo(double sueldo) {
+	public void setSueldo(float sueldo) {
 		this.sueldo = sueldo;
 	}
 
@@ -33,7 +29,7 @@ public class Profesor extends Persona {
 
 	@Override
 	public String toString() {
-		return "Profesor [sueldo=" + sueldo + ", materia=" + materia + "]";
+		return super.toString() + " Profesor [sueldo=" + sueldo + ", materia=" + materia + "]";
 	}
 
 }// class
