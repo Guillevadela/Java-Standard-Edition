@@ -26,14 +26,6 @@ public class Coche {
 		return matricula;
 	}
 
-	// TO String suele usarse para sacar datos por consola pero no se usa en aplicaciones reales donde el usuario no nevecista ver los datos
-	// de esa manera
-	@Override
-	public String toString() {
-		return "UF2404EjercicioPractico2Coche [matricula=" + matricula + ", marca=" + marca + ", modelo=" + modelo + ", color=" + color
-				+ ", potencia=" + potencia + ", cilindrada=" + cilindrada + "]";
-	}
-
 	// GETTERS & SETTERS
 
 	public void setMatricula(String matricula) {
@@ -80,4 +72,11 @@ public class Coche {
 		this.cilindrada = cilindrada;
 	}
 
+	// TO String suele usarse para sacar datos por consola pero no se usa en aplicaciones reales donde el usuario no nevecista ver los datos
+	// de esa manera
+	@Override
+	public String toString() {
+		return "UF2404EjercicioPractico2Coche [matricula=" + matricula + ", marca=" + marca + ", modelo=" + modelo + ", color=" + color
+				+ ", potencia=" + potencia + ", cilindrada=" + cilindrada + "]";
+	}
 }// CLASE
